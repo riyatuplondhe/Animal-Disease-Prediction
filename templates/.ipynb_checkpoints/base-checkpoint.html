@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Animal Health Issue Prediction Form{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+<center><h1>Animal Health Issue Prediction</h1></center>
+    <div class="container">
+        <center>
+        <a href="/home">Home</a>    <tb> | <t>
+        <a href="/prediction">Go to Prediction Form</a> <tb> | <t>
+        <a href="/contact">Contact Us</a>
+        </center>
+    </div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+<footer>
+        <center><p>&copy; 2026 Animal Health Issue Prediction System</p></center>
+        <center>
+            <a href="https://www.linkedin.com/in/manthanterse/">Linkedin</a> 
+            &nbsp; | &nbsp;
+            <a href="/twitter">Twitter</a> 
+            &nbsp; | &nbsp;
+            <a href="/github">GitHub</a>
+        </center>
+</footer>
+</html>

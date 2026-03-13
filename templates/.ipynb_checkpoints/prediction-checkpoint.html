@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction Result - Animal Health Issue Prediction{% endblock %}
+
+{% block content %}
+    <center>
+        <form action="/predict" method="post">
+            Animal_Type: <br>
+            <input type="Animal_Type" name="animal_type" placeholder="Enter the animal type">
+            <br>
+            Breed:<br>
+            <input type="Breed" name="breed" placeholder="Enter the breed">
+            <br>
+            Age:<br>
+            <input type="Age" name="age" placeholder="Enter the age">
+            <br>
+            Gender:<br>
+            <input type="Gender" name="gender" placeholder="Enter the gender">
+            <br>
+            Weight: <br>
+            <input type="Weight" name="weight" placeholder="Enter the weight">
+            <br>
+            Symptom1: <br>
+            <input type="Symptom1" name="symptom1" placeholder="Enter the symptom1 ">
+            <br>
+            Symptom2: <br>
+            <input type="Symptom2" name="symptom2" placeholder="Enter the symptom2 ">
+            <br>
+            Symptom3: <br>
+            <input type="Symptom3" name="symptom3" placeholder="Enter the symptom3 ">
+            <br>
+            Duration: <br>
+            <input type="Duration" name="duration" placeholder="Enter the duration ">
+            <br>
+            Vomitting: <br>
+            <select name="vomitting">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Diarrhea: <br>
+            <select name="diarrhea">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Laboured_Breathing: <br>
+            <select name="laboured_breathing">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Lameness:<br>
+            <select name="lameness">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Skin_Lesions:<br>
+            <select name="skin_lesions">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Nasal_Discharge:<br>
+            <select name="nasal_discharge">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Eye_Discharge:<br>
+            <select name="eye_discharge">
+                <option value="" disabled selected>Select yes or no</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            Body_Temperature:<br>
+            <input type="Body_Temperature" name="body_temperature" placeholder="Enter body temperature ">
+            <br>
+            Heart Rate:<br>
+            <input type="Heart_Rate" name="heart_rate" placeholder="Enter heart rate">
+            <br>
+            <br>
+            <button type="submit">Predict Health Issue</button>    
+        </form>
+    </center>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Animal Health Issue Prediction{% endblock %}
+
+{% block content %}
+    <center>
+        <h2>Contact Us</h2>
+        <form action="/contact" method="post">
+            Name:<br>
+            <input type="text" name="name" placeholder="Enter your name">
+            <br>
+            Email:<br>
+            <input type="email" name="email" placeholder="Enter your email">
+            <br>
+            Message:<br>
+            <textarea name="message" placeholder="Enter your message"></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+{% endblock %}
