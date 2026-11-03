@@ -8,6 +8,29 @@
     <div class="row justify-content-center">
       <div class="col-xl-10">
         <div class="prediction-card p-4 p-md-5">
+          {% if prediction %}
+          <div class="result-box mb-4" role="status">
+            <h5 class="mb-1">Prediction Result :- </h5>
+            <p class="result-disease mb-3"><b>{{ prediction }}</b></p>
+            {% if result_details %}
+            <div class="result-grid">
+              <div class="result-chip">
+                <span class="result-label">Severity Level</span>
+                <strong>{{ result_details.Severity_Level }}</strong>
+              </div>
+              <div class="result-chip">
+                <span class="result-label">Temperature Category</span>
+                <strong>{{ result_details.Temperature_Category }}</strong>
+              </div>
+              <div class="result-chip">
+                <span class="result-label">Heart Rate Category</span>
+                <strong>{{ result_details.Heart_Rate_Category }}</strong>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+
           <div class="text-center mb-4">
             <h2 class="fw-bold mb-2">Pet Disease Prediction Form</h2>
             <p class="text-muted mb-0">Enter pet profile and symptoms to receive an AI-based preliminary prediction.</p>
@@ -136,12 +159,6 @@
             </div>
           </form>
 
-          {% if prediction %}
-          <div class="result-box mt-4" role="status">
-            <h5 class="mb-1">Prediction Result</h5>
-            <p class="mb-0">{{ prediction }}</p>
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>
